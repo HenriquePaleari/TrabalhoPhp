@@ -13,10 +13,10 @@ include "cabecalho.php";
         <a class="nav-link" href="#">Home<span class="sr-only"></span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Ponto</a>
+        <a class="nav-link" href="Ponto.php">Ponto</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Folha de Ponto</a>
+        <a class="nav-link" href="folha.php">Folha de Ponto</a>
       </li>
     </ul>
   </div>
