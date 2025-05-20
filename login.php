@@ -1,29 +1,27 @@
 <?php
+include "cabecalho.php";
+?>
 
-include "cabecalho.php";?>
+<div class="container vh-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-4">
+        <form class="p-4 border rounded shadow bg-white">
+            <img src="imagens/Logo.jpg" alt="Logo.jpg" class="img-fluid mx-auto d-block">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira a sua senha">
+            </div>
+            <br>
+            <div class="text-center">
+                <a href="inicial.php" class="btn btn-primary btn-md">Enviar</a>
+            </div>
+        </form>
+    </div>
+</div>
 
-
-<form>
-  <h1>
-    ControlPoint
-</h1>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Insira seu email">
-    <small id="emailHelp" class="form-text text-muted"> 
-    </small>
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Senha</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Insira a sua senha">
-  </div><br>
-  <!--<div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div> (check box)-->
-  <a href="inicial.php" class="btn btn-primary btn-md active" role="button" aria-pressed="true">Enviar</a>
-</form>
- 
 <?php
 include "rodape.php";
 ?>
