@@ -7,7 +7,7 @@ include "cabecalho.php";
         <form class="p-4 border rounded shadow bg-white">
             <img src="imagens/Logo.jpg" alt="Logo.jpg" class="img-fluid mx-auto d-block">
             <div class="form-group">
-                <label for="exampleInputEmail1">Email</label>
+                <label for="exampleInputEmail1">Email do cliente</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu email">
             </div>
             <div class="form-group">
