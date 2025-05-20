@@ -16,14 +16,14 @@ include "cabecalho.php";
         <h5><a class="nav-link" href="Ponto.php">Ponto</a></h5>
       </li>
       <li class="nav-item">
-        <h5><a class="nav-link" href="folha.php">Folha de Ponto</a></h5>
+        <h5><a class="nav-link" href="holerite.php">Folha de Ponto</a></h5>
       </li>
     </ul>
   </div>
 </nav> 
 
 <body>
-  
+
 <div>
 <h1>Bem vindo ao ControlPoint</h1>
 </div>
