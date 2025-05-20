@@ -16,7 +16,7 @@ include "cabecalho.php";
         <h5><a class="nav-link" href="Ponto.php">Ponto</a></h5>
       </li>
       <li class="nav-item">
-        <h5><a class="nav-link" href="holerite.php">Folha de Ponto</a></h5>
+        <h5><a class="nav-link" href="holerite.php">Holerite</a></h5>
       </li>
     </ul>
   </div>
