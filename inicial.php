@@ -22,13 +22,13 @@ include "cabecalho.php";
   </div>
 </nav> 
 
+
 <body>
-
-<div>
-<h1>Bem vindo ao ControlPoint</h1>
-</div>
-
+  <div class="d-flex justify-content-center align-items-center vh-100">
+    <h1>Bem vindo ao ControlPoint</h1>
+ </div>
 </body>
+
 
 <?php
 include "rodape.php";
