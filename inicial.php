@@ -10,7 +10,7 @@ include "cabecalho.php";
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <h5><a class="nav-link" href="#">Home<span class="sr-only"></span></a></h5>
+        <h5><a class="nav-link" href="inicial.php">Home<span class="sr-only"></span></a></h5>
       </li>
       <li class="nav-item">
         <h5><a class="nav-link" href="Ponto.php">Ponto</a></h5>
