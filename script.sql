@@ -24,3 +24,8 @@ CREATE TABLE ControlePonto (
     saida TIME,
     FOREIGN KEY (funcionario_id) REFERENCES Funcionarios(id)
 );
+
+INSERT INTO Usuarios (login, senha) VALUES 
+('usuario1', 'root'),
+('usuario2', 'root'),
+('usuario3', 'root');
