@@ -1,7 +1,7 @@
 <?php
 
-$dsn = "MySql:host=localhost;dbname=ProjetoPHP";
-$user = "Gabriel";
+$dsn = "MySql:host=localhost;ControlePonto=ProjetoPHP";
+$user = "usuario1";
 $password = 'root';
 //$pdo = new PDO($dsn,$username,$password);
 
@@ -9,7 +9,7 @@ try { $conexao = new PDO(dsn: $dsn, Username: $user,
     password: $password);
 
 }
-catch(Exception $e){
+catch(Exception $erro){
     echo "Erro de conexão";
     exit;
 }
