@@ -4,7 +4,7 @@ include "cabecalho.php";
 
 <div class="container vh-100 d-flex justify-content-center align-items-center">
     <div class="col-md-4">
-        <form class="p-4 border rounded shadow bg-white">
+        <form action="BancoDeDados.php" method="post" class="p-4 border rounded shadow bg-white">
             <img src="imagens/Logo.jpg" alt="Logo.jpg" class="img-fluid mx-auto d-block">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
