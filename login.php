@@ -16,11 +16,12 @@ include "cabecalho.php";
             </div>
             <br>
             <div class="text-center">
-                <a href="inicial.php" class="btn btn-primary btn-md">Enviar</a>
+                <input type="submit" value="Enviar" class="btn btn-primary btn-md">
             </div>
         </form>
     </div>
 </div>
+
 
 <?php
 include "rodape.php";

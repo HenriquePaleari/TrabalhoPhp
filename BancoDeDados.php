@@ -1,14 +1,18 @@
 <?php
 
-$dsn = "MySql:host=localhost;ControlePonto=ProjetoPHP";
-$user = "usuario1";
+$dsn = "MySql:host=localhost;dbname=ControlePonto";
+$username = "usuario1";
 $password = 'root';
 //$pdo = new PDO($dsn,$username,$password);
 
-try { $conexao = new PDO(dsn: $dsn, Username: $user,
-    password: $password);
+//$stmt = $pdo->query("SELECT * FROM ");
+//while ($usuario = $stmt->fetch(PDO::FECTCH_ASSOC)){
+//    echo $usuario ['id'] . "-" . $usuario['login'] . "-" . $usuario"senha" . "<br>";
+//}
 
-}
+try { $conexao = new PDO(dsn: $dsn, Username: $user,
+     password: $password);
+    }
 catch(Exception $erro){
     echo "Erro de conexão";
     exit;
