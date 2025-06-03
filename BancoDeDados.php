@@ -1,6 +1,6 @@
 <?php
 
-$dsn = "MySql:host=localhost;dbname=ControlePonto";
+$dsn = "mysql:host=localhost;dbname=ControlePonto";
 $username = "usuario1";
 $password = 'root';
 $pdo = new PDO($dsn,$username,$password);
