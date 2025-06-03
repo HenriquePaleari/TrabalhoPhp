@@ -4,7 +4,7 @@ USE ControlePonto;
 CREATE TABLE Usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     login VARCHAR(50) UNIQUE NOT NULL,
-    senha VARCHAR(255) NOT NULL
+    Senha VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE Funcionarios (
@@ -25,7 +25,7 @@ CREATE TABLE ControlePonto (
     FOREIGN KEY (funcionario_id) REFERENCES Funcionarios(id)
 );
 
-INSERT INTO Usuarios (login, senha) VALUES 
+INSERT INTO Usuarios (login, Senha) VALUES 
 ('usuario1', 'root'),
 ('usuario2', 'root'),
 ('usuario3', 'root');

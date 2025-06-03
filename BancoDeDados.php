@@ -1,5 +1,5 @@
 <?php
-
+// codigo antigo para estudo:
 //$dsn = "mysql:host=localhost;dbname=ControlePonto";
 //$username = "usuario1";
 //$password = 'root';
