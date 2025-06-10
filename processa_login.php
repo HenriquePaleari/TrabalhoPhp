@@ -1,5 +1,5 @@
 <?php
-// Conexão com o banco
+// Dados de conexão com o banco
 $dsn = "mysql:host=localhost;dbname=ControlePonto;charset=utf8";
 $username = "usuario1"; // Usuário do MySQL com acesso
 $password = "root";      // Senha desse usuário
@@ -8,29 +8,40 @@ try {
     $pdo = new PDO($dsn, $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Recebe os dados do formulário
-    $usuario = $_POST["usuario"] ?? '';
-    $senha = $_POST["senha"] ?? '';
+    // Verifica se o formulário foi enviado
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // Recebe os dados do formulário
+        $usuario = $_POST["usuario"] ?? '';  // Nome do usuário (login)
+        $senha = $_POST["senha"] ?? '';      // Senha fornecida pelo usuário
 
-    // Consulta para verificar se o usuário e senha existem
-    $sql = "SELECT * FROM Usuarios WHERE login = :usuario AND senha = :senha";
-    $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(":usuario", $usuario);
-    $stmt->bindParam(":senha", $senha); // ATENÇÃO: veja nota de segurança abaixo
+        // Consulta para verificar se o usuário existe
+        $sql = "SELECT * FROM Usuarios WHERE login = :usuario";
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindParam(":usuario", $usuario);
+        $stmt->execute();
 
-    $stmt->execute();
+        if ($stmt->rowCount() > 0) {
+            // O usuário existe no banco
+            $usuario_bd = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($stmt->rowCount() > 0) {
-        echo "Login bem-sucedido! Bem-vindo, $usuario.";
-        // Aqui você pode iniciar a sessão e redirecionar, por exemplo:
-        // session_start();
-        // $_SESSION['usuario'] = $usuario;
-        // header("Location: painel.php");
-    } else {
-        echo "Usuário ou senha incorretos.";
+            // Verifica se a senha fornecida corresponde ao hash armazenado no banco
+            if (password_verify($senha, $usuario_bd['senha'])) {
+                // Se a senha estiver correta
+                session_start();  // Inicia a sessão
+                $_SESSION['usuario'] = $usuario;  // Armazena o nome de usuário na sessão
+                header("Location: inicial.php");  // Redireciona para a página inicial
+                exit;
+            } else {
+                // Senha incorreta
+                echo "Senha incorreta.";
+            }
+        } else {
+            // Usuário não encontrado
+            echo "Usuário não encontrado.";
+        }
     }
-
 } catch (PDOException $e) {
+    // Caso ocorra algum erro de conexão ou execução
     echo "Erro: " . $e->getMessage();
 }
 ?>
