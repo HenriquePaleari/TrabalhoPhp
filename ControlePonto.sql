@@ -3,7 +3,7 @@ USE ControlePonto;
 
 CREATE TABLE Usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    login VARCHAR(50) UNIQUE NOT NULL,
+    email VARCHAR(50) UNIQUE NOT NULL,
     Senha VARCHAR(255) NOT NULL
 );
 
@@ -25,7 +25,11 @@ CREATE TABLE ControlePonto (
     FOREIGN KEY (funcionario_id) REFERENCES Funcionarios(id)
 );
 
-INSERT INTO Usuarios (login, Senha) VALUES 
+INSERT INTO Usuarios (email, Senha) VALUES 
+('henriquepaleari@gmail.com','henrique123'),
 ('usuario1', 'root'),
 ('usuario2', 'root'),
-('usuario3', 'root');
+('usuario3', 'root'),
+('gustavocosta@gmail.com','Guga0804');
+
+select * from usuarios; 
