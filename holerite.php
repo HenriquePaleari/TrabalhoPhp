@@ -21,8 +21,11 @@ include "cabecalho.php";
     </ul>
   </div>
 </nav> 
-
-
+<div class="container mt-5">
+    <h2>Holerite</h2>
+    <p>Visualize e baixe seus holerites mensais.</p>
+    <img src="imagens/holherite.jpg" alt="ControlPoint" width="75" height="24">
+  </div>
 <?php
 include "rodape.php";
 ?>
