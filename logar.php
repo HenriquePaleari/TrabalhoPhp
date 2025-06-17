@@ -3,7 +3,7 @@
 if (isset($_POST['email']) && !empty($_POST['email']) && isset($_POST['senha']) && !empty($_POST['senha'])) {
 
    require "conexao.php";
-    require "Usuario_Class.php"; 
+   require "Usuario_Class.php"; 
 
     $u = new Usuario();
 
