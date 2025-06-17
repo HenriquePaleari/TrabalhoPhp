@@ -21,11 +21,13 @@ include "cabecalho.php";
     </ul>
   </div>
 </nav> 
-<div class="container mt-5">
-    <h2>Holerite</h2>
+
+<div class="container mt-5 text-center">
+    <h1>Holerite</h1>
+    <br>
     <p>Visualize e baixe seus holerites mensais.</p>
-    <img src="imagens/holherite.jpg" alt="ControlPoint" width="75" height="24">
-  </div>
+    <img src="imagens/holherite.jpg" alt="ControlPoint" width="700" height="550">
+</div>
 <?php
 include "rodape.php";
 ?>
