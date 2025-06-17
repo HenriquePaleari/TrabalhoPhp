@@ -14,7 +14,8 @@
             if($sql->rowCount() > 0 ){
                 
                 $dado = $sql->fetch();
-                $_SESSION ['idusers'] = $dado ['id'];
+
+                $_SESSION ['iduser'] = $dado ['id'];
 
                 return true;
             }else{

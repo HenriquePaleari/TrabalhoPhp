@@ -8,7 +8,7 @@ include "cabecalho.php";
             <img src="imagens/Logo.jpg" alt="Logo.jpg" class="img-fluid mx-auto d-block">
             <div class="form-group">
                 <label for="exampleInputEmail1">Email</label>
-                <input type="email" name="usuario" class="form-control" id="exampleInputEmail1" placeholder="Insira seu email">
+                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu email">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Senha</label>
