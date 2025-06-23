@@ -33,3 +33,8 @@ INSERT INTO Usuarios (email, Senha) VALUES
 ('gustavocosta@gmail.com','Guga0804');
 
 select * from usuarios; 
+
+CREATE TABLE cliques (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    data_hora DATETIME
+);
