@@ -1,5 +1,5 @@
 <?php
-include "cabecalho.php"; // Assuming this includes your <head> section with Bootstrap CSS
+include "cabecalho.php";
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -25,24 +25,18 @@ include "cabecalho.php"; // Assuming this includes your <head> section with Boot
 </nav>
 
 <style>
-    /* Remove body flex properties here if cabecalho.php sets them for the entire page */
+
     body {
-        background-color: #f8f9fa; /* Light background for the body */
-        /* If cabecalho.php already applies global body styles, you might not need all of these here.
-           However, keeping background-color is fine.
-           Remove: display, justify-content, align-items, min-height, padding-top if you want the card centered
-           in the remaining space. */
+        background-color: #f8f9fa; 
     }
 
     .main-content-wrapper {
         display: flex;
-        justify-content: center; /* Centers the card horizontally */
-        align-items: center;     /* Centers the card vertically within its wrapper */
-        min-height: calc(100vh - 56px); /* Adjust 56px based on your navbar's height */
-        /* You might need to make this wrapper fill the available vertical space. */
-        /* A common approach is to make the body a flex container, column direction. */
-        padding-top: 20px; /* Add some padding from the navbar */
-        padding-bottom: 20px; /* Add some padding at the bottom */
+        justify-content: center;
+        align-items: center;  
+        min-height: calc(100vh - 56px); 
+        padding-top: 20px;
+        padding-bottom: 20px; 
     }
 
     .card {
@@ -52,15 +46,15 @@ include "cabecalho.php"; // Assuming this includes your <head> section with Boot
     }
     .buttons .btn {
         margin: 5px;
-        min-width: 120px; /* Ensure buttons have similar width */
+        min-width: 120px; 
     }
     .records-list {
-        max-height: 300px; /* Limit height for scrollable records */
-        overflow-y: auto; /* Enable vertical scrolling */
+        max-height: 300px; 
+        overflow-y: auto; 
         border: 1px solid #dee2e6;
         border-radius: .375rem;
         padding: 10px;
-        background-color: #e9ecef; /* Light gray background for the list */
+        background-color: #e9ecef;/
     }
     .list-group-item {
         font-size: 0.9rem;
@@ -88,10 +82,10 @@ include "cabecalho.php"; // Assuming this includes your <head> section with Boot
             <div class="records-list">
                 <ul class="list-group">
                 <?php
-                // Define o nome do arquivo para armazenar os pontos
+
                 $file = 'pontos.txt';
 
-                // Função para registrar o ponto
+
                 function registrarPonto($tipoPonto, $arquivo) {
                     date_default_timezone_set('America/Sao_Paulo');
                     $dataHora = date('d/m/Y H:i:s');
@@ -100,13 +94,13 @@ include "cabecalho.php"; // Assuming this includes your <head> section with Boot
                     file_put_contents($arquivo, $registro, FILE_APPEND | LOCK_EX);
                 }
 
-                // Verifica se um botão de ponto foi clicado
+
                 if (isset($_POST['ponto'])) {
                     $tipoPonto = $_POST['ponto'];
                     registrarPonto($tipoPonto, $file);
                 }
 
-                // Exibe os pontos registrados
+                
                 if (file_exists($file)) {
                     $registros = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
                     if (!empty($registros)) {
@@ -127,5 +121,5 @@ include "cabecalho.php"; // Assuming this includes your <head> section with Boot
 </div>
 
 <?php
-include "rodape.php"; // Assuming this includes the closing </body> and </html> tags and Bootstrap JS
+include "rodape.php";
 ?>
